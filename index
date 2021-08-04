@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ONE TWO THREE</title>
+
+    <meta charset="UTF-8">
+    <link rel = "stylesheet" href = "style.css">
+</head>
+
+<body>
+    <div id = "container">
+        <!-- left column -->
+        <div class = "column" id = "columnLeft">
+            <span id = "textLeft">ONE</span>
+        </div>
+
+        <!-- middle column -->
+        <div class = "column" id = "columnMiddle">
+            <span id = "textMiddle">TWO</span>
+        </div>
+
+        <!-- right column -->
+        <div class = "column" id = "columnRight">
+            <span id = "textRight">THREE</span>
+        </div>
+    </div>
+</body>
+
+</html>
