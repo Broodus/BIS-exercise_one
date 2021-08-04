@@ -1,0 +1,77 @@
+/* CLASS */
+.column {
+    /* formatting */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33.33%;
+
+    /* border */
+    border-style: solid;
+    border-color: #000000;
+
+    /* font */
+    font-family: Impact, serif;
+    font-size: 10vh;
+}
+
+/* IDS */
+
+/* main container */
+#container {
+    display: flex;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    margin: 20px;
+}
+
+/* columns */
+#columnLeft {
+    animation: columnLeftAnim 2.75s infinite;
+}
+
+#columnMiddle {
+    background-color: #FFFFFF;
+    /* this fixes the thicker border as seen on the middle column */
+    border-left:  none;
+    border-right: none;
+}
+
+#columnRight {
+    background-color: #0000FF;
+}
+
+/* text */
+#textMiddle {
+    animation: columnMiddleAnim 2.5s ease-in-out infinite;
+}
+
+#textRight {
+    animation: columnRightAnim 2.85s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+/* keyframes */
+@keyframes columnLeftAnim {
+      0% { background-color: #FFCC00; }
+     50% { background-color: #0000FF; color: #FFFFFF }
+    100% { background-color: #FFCC00; }
+}
+
+@keyframes columnMiddleAnim {
+      0% { transform: rotate(  0deg) }
+    100% { transform: rotate(360deg) }
+}
+
+@keyframes columnRightAnim {
+    /* center */
+      0% { transform:translate(0vw,   0vh); color: #000000 }
+    /* bottom */
+     20% { transform:translate(0vw,  33vh); color: #FFFFFF }
+    /* delay + black */
+     50% { color: #000000 }
+    /* top  */
+     80% { transform:translate(0vw, -33vh); color: #FFFFFF }
+    /* center */
+    100% { transform:translate(0vw,   0vh); color: #000000 }
+}
